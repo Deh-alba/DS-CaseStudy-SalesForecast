@@ -4,7 +4,7 @@ services:
       context: ./serv_model
       dockerfile: Dockerfile
     ports:
-      - "8013:8888"
+      - "8013:8000"
     volumes:
       - ./serv_model/:/app  
     environment:
