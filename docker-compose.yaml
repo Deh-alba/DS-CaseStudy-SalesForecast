@@ -1,0 +1,16 @@
+services:
+  python_api:
+    build:
+      context: ./serv_model
+      dockerfile: Dockerfile
+    ports:
+      - "8013:8888"
+    volumes:
+      - ./serv_model/:/app  
+    environment:
+      - PYTHONUNBUFFERED=1
+    container_name: python_api
+
+networks:
+  default:
+    driver: bridge
